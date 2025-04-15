@@ -15,15 +15,6 @@ print("Building...")
 try:
     ret = subprocess.run(["gcc", code_path, "-o", app_path], 
                             stdout=subprocess.PIPE,
-
-
-Skip navigation
-Search
-
-
-
-Sign in
-
                             stderr=subprocess.PIPE,
                             timeout=COMPILER_TIMEOUT)
 except Exception as e:
