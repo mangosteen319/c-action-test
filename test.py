@@ -1,7 +1,7 @@
 import os, subprocess
 
 # Settings
-TEST_DIR = "/tests"
+TEST_DIR = "."
 CODE_FILE = "main.c"
 COMPILER_TIMEOUT = 10.0     #in seconds
 RUN_TIMEOUT = 10.0
@@ -15,6 +15,15 @@ print("Building...")
 try:
     ret = subprocess.run(["gcc", code_path, "-o", app_path], 
                             stdout=subprocess.PIPE,
+
+
+Skip navigation
+Search
+
+
+
+Sign in
+
                             stderr=subprocess.PIPE,
                             timeout=COMPILER_TIMEOUT)
 except Exception as e:
